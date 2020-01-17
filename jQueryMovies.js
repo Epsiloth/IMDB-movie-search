@@ -77,7 +77,7 @@ let keyAPI = "cf99591";
 			let mdHeader = $('<div class="modal-header"></div>');
 			let mdTitle = $('<h5 class="modal-title">'+result.Title+' ('+result.Year+')'+'</h5>');
 			let mdBody = $('<div class="modal-body"></div>');
-			let mdImage = $('<img src='+result.Poster+'>');
+			let mdImage = $('<img src='+result.Poster+'><hr>');
 			let mdPlot = $('<p><b>Plot:</b></p><p>'+result.Plot+'</p><hr>');
 			let mdRating;
 			if(parseFloat(result.imdbRating) < 4){
@@ -91,7 +91,7 @@ let keyAPI = "cf99591";
 				mdRating = $('<p><b>Rating:</b></p><div class="progress"><div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="'+parseFloat(result.imdbRating)*10+'"aria-valuemin="0" aria-valuemax="100" style="width:'+parseFloat(result.imdbRating)*10+'%">'+parseFloat(result.imdbRating)*10+'%</div></div>');
 			}
 			let mdDetails = $('<p><b>Country:</b> '+result.Country+' <b>Runtime:</b> '+result.Runtime+'</p><hr>');
-			let mdDirector = $('<p><b>Director:</b> '+result.Director+'</p><hr>');
+			let mdDirector = $('<p><b>Director:</b> '+result.Director+'</p>');
 			let mdActors = $('<p><b>Actors:</b> '+result.Actors+'</p><hr>');
 			let mdGenre = $('<p><b>Genres:</b> '+result.Genre+'</p><hr>');
 			let mdFooter = $('<div class="modal-footer"></div>');
