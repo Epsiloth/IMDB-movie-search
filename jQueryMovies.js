@@ -11,7 +11,7 @@ let keyAPI = "cf99591";
 		function ajaxPetition(input){
 			if(!course){
 				course = true;
-				$.ajax({url: "http://www.omdbapi.com/?s="+input+"&apikey="+keyAPI+"&page="+nPage, beforeSend: function(){
+				$.ajax({url: "https://www.omdbapi.com/?s="+input+"&apikey="+keyAPI+"&page="+nPage, beforeSend: function(){
 					let spinner = $('<div class="spinner-border text-warning" id="spinner"></div>');
 					$('#container').append(spinner);
 				},
@@ -63,7 +63,7 @@ let keyAPI = "cf99591";
 		}
 
 		function detailPetition(id){
-			$.ajax({url: "http://www.omdbapi.com/?i="+id+"&apikey="+keyAPI, success: function(result){
+			$.ajax({url: "https://www.omdbapi.com/?i="+id+"&apikey="+keyAPI, success: function(result){
 					console.log(result);
 					detailShow(result);
 				}
